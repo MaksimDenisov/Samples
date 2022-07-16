@@ -1,7 +1,7 @@
 package com.github.maksimdenisov.algorithm.math;
 
-import java.util.NoSuchElementException;
-import java.util.Scanner;
+
+import static com.github.maksimdenisov.algorithm.math.Util.getNumber;
 
 /**
  * the Euclidean algorithm is an efficient method
@@ -18,16 +18,6 @@ public class GCD {
         System.out.println("Please enter second number");
         long b = getNumber();
         System.out.printf("Greatest common divisor for numbers %d and %d is %d\n", a, b, computeGCD(a, b));
-    }
-
-    private static long getNumber() {
-        while (true) {
-            try {
-                return new Scanner(System.in).nextLong();
-            } catch (NoSuchElementException e) {
-                System.out.println("Please enter number");
-            }
-        }
     }
 
     private static long computeGCD(long a, long b) {
